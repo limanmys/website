@@ -20,7 +20,7 @@ const variants = {
 export default function Hero() {
   return (
     <motion.div variants={variants} initial="hidden" animate="visible">
-      <section className="mt-36 space-y-6 pb-8 pt-6 md:pb-12 md:pt-10 lg:py-32">
+      <section className="mt-[10vh] space-y-6 pb-8 pt-6 md:pb-12 md:pt-10 lg:py-32">
         <div className="container flex max-w-[64rem] flex-col items-center gap-4 text-center">
           <Link
             href={siteConfig.links.github}
@@ -48,7 +48,8 @@ export default function Hero() {
             <b> yazıcıları</b> uzaktan, kararlı, güvenli ve genişletilebilir
             yöntemler ile merkezi olarak yönetmenizi sağlar.
           </p>
-          <AppWindow className="mt-10">
+
+          <AppWindow className="relative mt-10">
             <Image
               src={HeroPictureWhite}
               className="block dark:hidden"

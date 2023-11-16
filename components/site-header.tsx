@@ -21,13 +21,16 @@ export function SiteHeader() {
   const [top, setTop] = useState(true)
 
   useEffect(() => {
-    window.onscroll = function () {
+    const handleScroll = () => {
       if (window.scrollY === 0) {
         setTop(true)
       } else {
         setTop(false)
       }
     }
+    handleScroll()
+
+    window.onscroll = handleScroll
 
     return () => {
       window.onscroll = null

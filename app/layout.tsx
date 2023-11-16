@@ -13,7 +13,7 @@ import { ThemeProvider } from "@/components/theme-provider"
 
 export const metadata: Metadata = {
   title: {
-    default: siteConfig.name,
+    default: siteConfig.name + " | HAVELSAN Açıklab",
     template: `%s - ${siteConfig.name}`,
   },
   description: siteConfig.description,

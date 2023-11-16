@@ -8,10 +8,6 @@ export const siteConfig = {
       title: "Ana Sayfa",
       href: "/",
     },
-    {
-      title: "Galeri",
-      href: "/gallery",
-    },
   ],
   links: {
     github: "https://github.com/havelsan",

@@ -19,7 +19,7 @@ export default function AppWindow({
       <div className="flex h-8 items-center gap-2 border-b bg-foreground/5">
         <div className="ml-1"></div>
         <div className="h-3 w-3 rounded-full bg-red-500 transition-all hover:bg-red-600"></div>
-        <div className="h-3 w-3 rounded-full bg-orange-500 transition-all hover:bg-orange-600"></div>
+        <div className="h-3 w-3 rounded-full bg-yellow-500 transition-all hover:bg-yellow-600"></div>
         <div className="h-3 w-3 rounded-full bg-green-500 transition-all hover:bg-green-600"></div>
       </div>
 
