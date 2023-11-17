@@ -106,4 +106,10 @@
       fixed 0 0 / 20px 20px radial-gradient(#313131 1px, transparent 0),
       fixed 10px 10px / 20px 20px radial-gradient(#313131 1px, transparent 0);
   }
+
+  .silhouette {
+    -webkit-filter: contrast(0) sepia(100%) saturate(2000%) brightness(100%);
+    filter: contrast(0) sepia(100%) saturate(2000%) brightness(100%);
+    opacity: 1;
+  }
 }

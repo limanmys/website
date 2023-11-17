@@ -193,7 +193,7 @@ export default function Showcase() {
               </div>
             </div>
             <div className="lg:col-span-7">
-              <div className="relative z-20 -ml-1 mt-10 w-[45rem] shadow-xl shadow-blue-900/10 sm:w-auto lg:mt-0 lg:w-[67.8125rem]">
+              <div className="relative z-20 -ml-1 mt-10 w-[45rem] rounded-md shadow-xl shadow-blue-900/10 sm:w-auto lg:mt-0 lg:w-[67.8125rem]">
                 <AppWindow>{ShowcaseItems[active].content}</AppWindow>
               </div>
             </div>

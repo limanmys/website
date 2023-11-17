@@ -80,6 +80,10 @@ module.exports = {
             transform: "rotate(90deg)",
           },
         },
+        "infinite-scroll": {
+          from: { transform: "translateX(0)" },
+          to: { transform: "translateX(-100%)" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -89,6 +93,7 @@ module.exports = {
         line3: "line 12s linear infinite",
         flip: "flip 6s infinite steps(2, end)",
         rotate: "rotate 3s linear infinite both",
+        "infinite-scroll": "infinite-scroll 35s linear infinite",
       },
     },
   },

@@ -11,6 +11,7 @@ import { cn } from "@/lib/utils"
 
 import HeroPictureDark from "../../public/images/NewLimanDark.png"
 import HeroPictureWhite from "../../public/images/NewLimanWhite.png"
+import Particles from "../ui/particles"
 import AppWindow from "../ui/window"
 
 const variants = {
@@ -21,6 +22,7 @@ export default function Hero() {
   return (
     <motion.div variants={variants} initial="hidden" animate="visible">
       <section className="mt-[10vh] space-y-6 pb-8 pt-6 md:pb-12 md:pt-10 lg:py-32">
+        <Particles className="absolute -z-20 h-[40vh] w-full" />
         <div className="container flex max-w-[64rem] flex-col items-center gap-4 text-center">
           <Link
             href={siteConfig.links.github}
