@@ -2,7 +2,7 @@ export default function Bg() {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      className="absolute -z-10 h-[1300px] w-full opacity-25"
+      className="absolute -z-10 h-full max-h-[1300px] w-full opacity-25"
     >
       <defs>
         <filter

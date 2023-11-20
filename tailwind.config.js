@@ -93,7 +93,7 @@ module.exports = {
         line3: "line 12s linear infinite",
         flip: "flip 6s infinite steps(2, end)",
         rotate: "rotate 3s linear infinite both",
-        "infinite-scroll": "infinite-scroll 35s linear infinite",
+        "infinite-scroll": "infinite-scroll 40s linear infinite",
       },
     },
   },

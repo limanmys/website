@@ -14,14 +14,20 @@ import { cn } from "@/lib/utils"
 
 export default function LogoCarousel() {
   const logos = [
-    { src: GAMER, alt: "GAMER, İçişleri Bakanlığı" },
-    { src: HAVELSAN, alt: "HAVELSAN" },
+    {
+      src: YSK,
+      alt: "Yüksek Seçim Kurulu",
+      noFilter: true,
+      className: "w-full h-[72px]",
+    },
     {
       src: KiyiEmniyeti,
       alt: "Kıyı Emniyeti Genel Müdürlüğü",
       noFilter: true,
       className: "w-full h-[72px]",
     },
+    { src: GAMER, alt: "GAMER, İçişleri Bakanlığı" },
+    { src: HAVELSAN, alt: "HAVELSAN" },
     { src: Icisleri, alt: "T.C. İçişleri Bakanlığı", className: "h-[48px]" },
     { src: Kizilay, alt: "Kızılay", className: "h-[48px]" },
     { src: MSB, alt: "Milli Savunma Bakanlığı", className: "h-[55px]" },
@@ -31,12 +37,7 @@ export default function LogoCarousel() {
       className: "h-[48px]",
     },
     { src: TCMB, alt: "Türkiye Cumhuriyet Merkez Bankası" },
-    {
-      src: YSK,
-      alt: "Yüksek Seçim Kurulu",
-      noFilter: true,
-      className: "w-full h-[72px]",
-    },
+
     { src: ZiraatKatilim, alt: "Ziraat Katılım" },
   ]
 
