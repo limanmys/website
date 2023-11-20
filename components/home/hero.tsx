@@ -5,7 +5,6 @@ import Link from "next/link"
 import { motion } from "framer-motion"
 import { ArrowRight } from "lucide-react"
 
-import { siteConfig } from "@/config/site"
 import { fontHeading } from "@/lib/fonts"
 import { cn } from "@/lib/utils"
 
@@ -25,9 +24,8 @@ export default function Hero() {
         <Particles className="absolute -z-20 h-[40vh] w-full" />
         <div className="container flex max-w-[64rem] flex-col items-center gap-4 text-center">
           <Link
-            href={siteConfig.links.github}
+            href="#contact"
             className="group/herobtn hover:group-hover/herobtn flex items-center gap-2 rounded-2xl bg-muted px-4 py-1.5 text-sm font-medium transition-all"
-            target="_blank"
           >
             Detaylı bilgi için iletişime geçin{" "}
             <div className="max-w-5 w-5 overflow-hidden">
