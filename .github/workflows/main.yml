@@ -56,11 +56,11 @@ jobs:
           chmod 775 $DEBIAN_PATH/postinst
           mv .next/standalone $SERVER_BIN_PATH
           dpkg-deb --build $TMP_DIR
-          mv /tmp/liman-website.deb /tmp/liman-website-x64.deb
+          mv /tmp/liman-website.deb /tmp/liman-website-${{ github.run_number }}.deb
           rm -rf $DEBIAN_PATH
 
           sed -i s/%VERSION%/${{ github.run_number }}/g build/rhel/website.spec
-          rpmbuild -ba build/rhel/website.spec --define "_app_dir $TMP_DIR" --define "_rpmdir /tmp" --define "_rpmfilename liman-website-x64.rpm"
+          rpmbuild -ba build/rhel/website.spec --define "_app_dir $TMP_DIR" --define "_rpmdir /tmp" --define "_rpmfilename liman-website-${{ github.run_number }}.rpm"
 
       - name: Release 🚀
         id: create_release
@@ -68,7 +68,9 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.TOKEN }}
         with:
-          files: /tmp/liman-${{ env.UI_BRANCH }}-${{ github.run_number }}.zip
+          files: |
+            /tmp/liman-website-${{ github.run_number }}.deb
+            /tmp/liman-website-${{ github.run_number }}.rpm
           name: "Release ${{ env.UI_BRANCH }} ${{ github.run_number }}"
           tag_name: "release.${{ env.UI_BRANCH }}.${{ github.run_number }}"
           prerelease: ${{ env.PRERELEASE }}
