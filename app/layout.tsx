@@ -2,14 +2,14 @@ import "@/styles/globals.css"
 
 import { Metadata, Viewport } from "next"
 
-import { siteConfig } from "@/config/site"
-import { fontSans } from "@/lib/fonts"
-import { cn } from "@/lib/utils"
-import Bg from "@/components/ui/bg"
 import { SiteFooter } from "@/components/footer"
 import Lines from "@/components/lines"
 import { SiteHeader } from "@/components/site-header"
 import { ThemeProvider } from "@/components/theme-provider"
+import Bg from "@/components/ui/bg"
+import { siteConfig } from "@/config/site"
+import { fontSans } from "@/lib/fonts"
+import { cn } from "@/lib/utils"
 
 export const metadata: Metadata = {
   title: {
@@ -18,9 +18,9 @@ export const metadata: Metadata = {
   },
   description: siteConfig.description,
   icons: {
-    icon: "/favicon.ico",
-    shortcut: "/favicon-16x16.png",
-    apple: "/apple-touch-icon.png",
+    icon: "/favicon.png",
+    shortcut: "/favicon.png",
+    apple: "/favicon.png",
   },
 }
 
