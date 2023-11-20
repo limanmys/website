@@ -1,0 +1,36 @@
+#!/bin/bash
+
+if [ ! -d "/liman/website" ]; then
+    mkdir -p /liman/website
+fi
+
+chmod -R 770 /liman/website
+chown -R root:root /liman/website
+
+if [ -f "/usr/lib/systemd/system/liman-website.service" ]; then
+    rm -rf /usr/lib/systemd/system/liman-website.service  2>/dev/null || true
+    systemctl disable liman-website.service 2>/dev/null || true
+    systemctl stop liman-website.service 2>/dev/null || true
+    systemctl daemon-reload 2>/dev/null || true
+fi
+
+echo """
+[Unit]
+Description=Liman Website Service
+After=network.target
+StartLimitIntervalSec=0
+[Service]
+Type=simple
+Restart=always
+RestartSec=1
+User=liman
+WorkingDirectory=/liman/website
+ExecStart=/usr/bin/node server.js
+
+[Install]
+WantedBy=multi-user.target
+""" > /usr/lib/systemd/system/liman-website.service
+
+systemctl daemon-reload
+systemctl enable liman-website.service
+systemctl restart liman-website.service

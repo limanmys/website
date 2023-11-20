@@ -1,0 +1,8 @@
+Package: liman-website
+Version: %VERSION%
+Section: utils
+Architecture: amd64
+Priority: optional
+Maintainer: Doğukan Öksüz <me@dogukan.dev>
+Description: Liman Website Service
+Depends: nodejs
