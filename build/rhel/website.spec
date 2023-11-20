@@ -6,7 +6,7 @@ Prefix: /liman/website
 Summary: Liman Website Service
 Group: Applications/System
 BuildArch: x86_64
-Depends: nodejs
+Requires: nodejs
 
 %description
 Liman Website Service
