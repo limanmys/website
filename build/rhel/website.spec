@@ -57,6 +57,5 @@ systemctl restart liman-website.service
 %files
 %defattr(0770, root, root)
 /liman/website/*
-/liman/website/.env.example
 
 %define _unpackaged_files_terminate_build 0
