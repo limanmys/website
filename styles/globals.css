@@ -3,6 +3,10 @@
 @tailwind utilities;
 
 @layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
     font-feature-settings: "cv02", "cv03", "cv04", "cv11";
     -webkit-font-smoothing: antialiased;
@@ -78,6 +82,12 @@
     --ring: 215 20.2% 65.1%;
 
     --container-height: calc(100vh - 4rem - 1px);
+  }
+
+  .grecaptcha-badge,
+  .grecaptcha-logo,
+  iframe[title="reCAPTCHA"] {
+    display: none !important;
   }
 }
 
