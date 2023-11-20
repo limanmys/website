@@ -54,7 +54,8 @@ jobs:
           cat $DEBIAN_PATH/control
           cp ./build/debian/postinst $DEBIAN_PATH/postinst
           chmod 775 $DEBIAN_PATH/postinst
-          mv .next/standalone $SERVER_BIN_PATH
+          mv .next/standalone/* $SERVER_BIN_PATH >/dev/null
+          mv .next/standalone/.next $SERVER_BIN_PATH >/dev/null
           dpkg-deb --build $TMP_DIR
           mv /tmp/liman-website.deb /tmp/liman-website-${{ github.run_number }}.deb
           rm -rf $DEBIAN_PATH
