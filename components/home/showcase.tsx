@@ -8,8 +8,14 @@ import { motion } from "framer-motion"
 import { fontHeading } from "@/lib/fonts"
 import { cn } from "@/lib/utils"
 
-import HeroPictureDark from "../../public/images/DevMgrDark.png"
-import HeroPictureWhite from "../../public/images/DevMgrWhite.png"
+import DevMgrDark from "../../public/images/DevMgrDark.png"
+import DevMgrWhite from "../../public/images/DevMgrWhite.png"
+import DomainDark from "../../public/images/DomainDark.png"
+import DomainWhite from "../../public/images/DomainWhite.png"
+import NetexDark from "../../public/images/NetexDark.png"
+import NetexWhite from "../../public/images/NetexWhite.png"
+import NetworkDark from "../../public/images/NetworkDark.png"
+import NetworkWhite from "../../public/images/NetworkWhite.png"
 import AppWindow from "../ui/window"
 
 const variants = {
@@ -43,11 +49,11 @@ const ShowcaseItems = [
   {
     title: "Cihaz Yöneticisi",
     description:
-      "Cihaz yöneticimizi kullanarak sunucularınızı ve istemcilerinizi uzaktan detaylı şekilde yönetebilirsiniz.",
+      "Windows ve Linux cihazlarınıza görevler gönderin, yazılım ve donanım envanter bilgilerinizi görüntüleyin, paket ve yama yönetiminizi yapın, dinamik koleksiyonlarla hızlıca yönetin.",
     content: (
       <>
         <Image
-          src={HeroPictureWhite}
+          src={DevMgrWhite}
           className="block dark:hidden"
           alt="Liman Merkezi Yönetim Sistemi"
           quality={100}
@@ -56,7 +62,7 @@ const ShowcaseItems = [
           height={800}
         />
         <Image
-          src={HeroPictureDark}
+          src={DevMgrDark}
           className="hidden dark:block"
           alt="Liman Merkezi Yönetim Sistemi"
           quality={100}
@@ -68,13 +74,13 @@ const ShowcaseItems = [
     ),
   },
   {
-    title: "Yazılım Yöneticisi",
+    title: "Ağ Keşif Eklentisi",
     description:
-      "Yazılım yöneticimizi kullanarak sunucularınızda bulunan yazılımları uzaktan yönetebilirsiniz.",
+      "Organizasyonunuzda aktif olan varlıklarınızı keşfedin ve otomatik envanter bilgilerini toplayın. Tespit edilen varlıklardaki IP, MAC ve Port değişikliklerini takip edin.",
     content: (
       <>
         <Image
-          src={HeroPictureWhite}
+          src={NetexWhite}
           className="block dark:hidden"
           alt="Liman Merkezi Yönetim Sistemi"
           quality={100}
@@ -83,7 +89,7 @@ const ShowcaseItems = [
           height={800}
         />
         <Image
-          src={HeroPictureDark}
+          src={NetexDark}
           className="hidden dark:block"
           alt="Liman Merkezi Yönetim Sistemi"
           quality={100}
@@ -95,13 +101,13 @@ const ShowcaseItems = [
     ),
   },
   {
-    title: "Ağ Yöneticisi",
+    title: "Ağ İzleme Eklentisi",
     description:
-      "Ağ yöneticimizi kullanarak ağ cihazlarınızı uzaktan yönetebilirsiniz.",
+      "Ajansız şekilde cihazlarınızın sağlık durumunu ve erişilebilirliğini izleyin, tanımladığınız eşik değerlere göre alarmlar oluşturun ve ağınızı proaktif şekilde izleyin, bant genişliği tüketiminizi analiz edin.",
     content: (
       <>
         <Image
-          src={HeroPictureWhite}
+          src={NetworkWhite}
           className="block dark:hidden"
           alt="Liman Merkezi Yönetim Sistemi"
           quality={100}
@@ -110,7 +116,7 @@ const ShowcaseItems = [
           height={800}
         />
         <Image
-          src={HeroPictureDark}
+          src={NetworkDark}
           className="hidden dark:block"
           alt="Liman Merkezi Yönetim Sistemi"
           quality={100}
@@ -122,13 +128,13 @@ const ShowcaseItems = [
     ),
   },
   {
-    title: "Yazıcı Yöneticisi",
+    title: "Domain Yöneticisi",
     description:
-      "Yazıcı yöneticimizi kullanarak yazıcılarınızı uzaktan yönetebilirsiniz.",
+      "Aktif dizin ve SAMBA sunucularınızı merkezi olarak uzaktan yönetin. Etki alanınızdaki kullanıcı, grup ve organizasyon birimlerini yönetin. Etki alanınızdaki Linux cihazlara politika uygulayın ve uzaktan yönetim sağlayın.",
     content: (
       <>
         <Image
-          src={HeroPictureWhite}
+          src={DomainWhite}
           className="block dark:hidden"
           alt="Liman Merkezi Yönetim Sistemi"
           quality={100}
@@ -137,7 +143,7 @@ const ShowcaseItems = [
           height={800}
         />
         <Image
-          src={HeroPictureDark}
+          src={DomainDark}
           className="hidden dark:block"
           alt="Liman Merkezi Yönetim Sistemi"
           quality={100}
