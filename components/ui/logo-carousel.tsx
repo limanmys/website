@@ -18,13 +18,13 @@ export default function LogoCarousel() {
       src: YSK,
       alt: "Yüksek Seçim Kurulu",
       noFilter: true,
-      className: "w-full h-[72px]",
+      className: "w-auto h-[72px]",
     },
     {
       src: KiyiEmniyeti,
       alt: "Kıyı Emniyeti Genel Müdürlüğü",
       noFilter: true,
-      className: "w-full h-[72px]",
+      className: "w-auto h-[72px]",
     },
     { src: GAMER, alt: "GAMER, İçişleri Bakanlığı" },
     { src: HAVELSAN, alt: "HAVELSAN" },
@@ -80,7 +80,7 @@ function LogoImage({
       src={src}
       alt={alt}
       className={cn(
-        !noFilter && "w-full brightness-0 invert-[25%] dark:invert-[75%]",
+        !noFilter && "w-auto brightness-0 invert-[25%] dark:invert-[75%]",
         className
       )}
       quality={100}
