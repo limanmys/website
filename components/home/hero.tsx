@@ -8,8 +8,8 @@ import { ArrowRight } from "lucide-react"
 import { fontHeading } from "@/lib/fonts"
 import { cn } from "@/lib/utils"
 
-import HeroPictureDark from "../../public/images/NewLimanDark.png"
-import HeroPictureWhite from "../../public/images/NewLimanWhite.png"
+import HeroPictureDark from "../../public/images/NewLimanDark.jpg"
+import HeroPictureWhite from "../../public/images/NewLimanWhite.jpg"
 import Particles from "../ui/particles"
 import AppWindow from "../ui/window"
 

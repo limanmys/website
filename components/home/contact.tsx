@@ -12,7 +12,7 @@ export default function ContactSection() {
           <div className="col-span-2 flex flex-col justify-center">
             <h5
               className={cn(
-                "bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text font-heading text-4xl text-transparent",
+                "bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text font-heading text-4xl leading-[3rem] text-transparent",
                 fontHeading.variable
               )}
             >
