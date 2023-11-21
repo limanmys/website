@@ -163,11 +163,11 @@ export default function Showcase() {
     <motion.div variants={variants} initial="in" animate="inactive" exit="out">
       <section
         id="showcase"
-        className="relative overflow-hidden border-t bg-background bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px] pb-28 pt-20 sm:py-32"
+        className="relative overflow-hidden border-t bg-background bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px] py-16 sm:py-32"
       >
         <ShowcaseGradient />
         <div className="container relative px-4 sm:px-6 lg:px-8">
-          <div className="flex max-w-2xl flex-col items-center justify-center md:mx-auto md:text-center xl:max-w-none">
+          <div className="flex max-w-2xl flex-col items-center justify-center text-center md:mx-auto xl:max-w-none">
             <h2
               className={cn(
                 "bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text font-heading text-3xl text-transparent sm:text-4xl md:text-5xl",
@@ -176,7 +176,7 @@ export default function Showcase() {
             >
               Eklentilerimiz
             </h2>
-            <p className="mt-6 max-w-4xl text-lg font-medium tracking-tight text-muted-foreground">
+            <p className="mt-6 max-w-4xl font-medium tracking-tight text-muted-foreground md:text-lg">
               Liman Merkezi Yönetim Sistemi&apos;nin genişletilebilir yapısı
               sayesinde birçok eklenti geliştirilmiştir. Bu eklentileri
               kullanarak Liman&apos;ı istediğiniz gibi genişletebilirsiniz.
@@ -184,7 +184,7 @@ export default function Showcase() {
               aşağıdadır.
             </p>
           </div>
-          <div className="mt-16 grid grid-cols-1 items-center gap-y-2 pt-10 sm:gap-y-6 md:mt-20 lg:grid-cols-12 lg:pt-0">
+          <div className="mt-4 grid grid-cols-1 items-center gap-y-2 pt-10 sm:mt-14 sm:gap-y-6 md:mt-20 lg:grid-cols-12 lg:pt-0">
             <div className="-mx-4 flex overflow-x-auto pb-4 sm:mx-0 sm:overflow-visible sm:pb-0 lg:col-span-5">
               <div className="relative flex gap-x-4 whitespace-nowrap px-4 sm:mx-auto sm:px-0 lg:mx-0 lg:block lg:gap-x-0 lg:gap-y-1 lg:whitespace-normal">
                 {ShowcaseItems.map((item, i) => (
@@ -199,7 +199,7 @@ export default function Showcase() {
               </div>
             </div>
             <div className="lg:col-span-7">
-              <div className="relative z-20 -ml-1 mt-10 w-[45rem] rounded-md shadow-xl shadow-blue-900/10 sm:w-auto lg:mt-0 lg:w-[67.8125rem]">
+              <div className="relative z-20 -ml-1 w-[45rem] rounded-md shadow-xl shadow-blue-900/10 sm:w-auto lg:mt-0 lg:w-[67.8125rem]">
                 <AppWindow>{ShowcaseItems[active].content}</AppWindow>
               </div>
             </div>
@@ -226,7 +226,7 @@ function ShowcaseMenuItem({
       className={cn(
         "group relative px-4 py-1 transition-all lg:p-6",
         active &&
-          "rounded-full bg-foreground lg:rounded-l-xl lg:rounded-r-none lg:bg-accent/50 lg:ring-1 lg:ring-inset lg:ring-foreground/10",
+          "rounded-full bg-foreground/20 lg:rounded-l-xl lg:rounded-r-none lg:bg-accent/50 lg:ring-1 lg:ring-inset lg:ring-foreground/10",
         !active && "hover:rounded-l-xl hover:bg-accent/30"
       )}
       onClick={onClick}
@@ -234,12 +234,12 @@ function ShowcaseMenuItem({
       <h3>
         <button
           className={cn(
-            "ui-not-focus-visible:outline-none font-heading text-lg font-semibold tracking-wide",
+            "ui-not-focus-visible:outline-none font-heading font-semibold tracking-wide md:text-lg",
             fontHeading.variable
           )}
           type="button"
         >
-          <span className="absolute inset-0 rounded-full lg:rounded-l-xl lg:rounded-r-none" />
+          <span className="absolute inset-0 rounded-full  lg:rounded-l-xl lg:rounded-r-none" />
           {title}
         </button>
       </h3>

@@ -41,7 +41,7 @@ export default function Hero() {
             Açık Kaynak
             <br /> Merkezi Yönetim Sistemi.
           </h1>
-          <p className="mt-6 max-w-[42rem] leading-normal text-muted-foreground sm:text-xl sm:leading-8">
+          <p className="mt-6 max-w-[42rem] text-base leading-normal text-muted-foreground sm:text-xl sm:leading-8">
             <b>Liman Merkezi Yönetim Sistemi</b> bilgi teknolojisi
             süreçlerinizde bulunan <b>sunucu</b>, <b>istemci</b> (Windows,
             Linux), <b>ağ cihazları</b> (router, switch) ve
@@ -49,7 +49,7 @@ export default function Hero() {
             yöntemler ile merkezi olarak yönetmenizi sağlar.
           </p>
 
-          <AppWindow className="relative mt-10">
+          <AppWindow className="relative -m-5 mt-10">
             <Image
               src={HeroPictureWhite}
               className="block dark:hidden"

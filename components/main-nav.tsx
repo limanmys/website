@@ -19,7 +19,7 @@ export function MainNav({ items }: MainNavProps) {
         <Logo className="h-7 w-auto" />
       </Link>
       {items?.length ? (
-        <nav className="flex gap-6">
+        <nav className="hidden gap-6 md:flex">
           {items?.map(
             (item, index) =>
               item.href && (
