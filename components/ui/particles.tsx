@@ -29,6 +29,10 @@ export default function Particles({
   const dpr = typeof window !== "undefined" ? window.devicePixelRatio : 1
 
   useEffect(() => {
+    if (typeof window === "undefined") return
+
+    if (document.readyState !== "complete") return
+
     if (canvasRef.current) {
       context.current = canvasRef.current.getContext("2d")
     }
@@ -39,7 +43,7 @@ export default function Particles({
     return () => {
       window.removeEventListener("resize", initCanvas)
     }
-  }, [theme])
+  }, [theme, document.readyState])
 
   useEffect(() => {
     onMouseMove()

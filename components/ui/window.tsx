@@ -2,6 +2,8 @@ import { ReactNode } from "react"
 
 import { cn } from "@/lib/utils"
 
+import Spotlight, { SpotlightCard } from "./spotlight"
+
 export default function AppWindow({
   children,
   className,
@@ -23,7 +25,11 @@ export default function AppWindow({
         <div className="h-3 w-3 rounded-full bg-green-500 transition-all hover:bg-green-600"></div>
       </div>
 
-      {children}
+      <Spotlight>
+        <SpotlightCard className="z-5 rounded-none border-0 after:bg-foreground dark:after:bg-white">
+          {children}
+        </SpotlightCard>
+      </Spotlight>
     </div>
   )
 }

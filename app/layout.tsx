@@ -2,21 +2,21 @@ import "@/styles/globals.css"
 
 import { Metadata, Viewport } from "next"
 
+import { fontSans } from "@/lib/fonts"
+import { cn } from "@/lib/utils"
+import Bg from "@/components/ui/bg"
 import { SiteFooter } from "@/components/footer"
 import Lines from "@/components/lines"
 import { SiteHeader } from "@/components/site-header"
 import { ThemeProvider } from "@/components/theme-provider"
-import Bg from "@/components/ui/bg"
-import { siteConfig } from "@/config/site"
-import { fontSans } from "@/lib/fonts"
-import { cn } from "@/lib/utils"
 
 export const metadata: Metadata = {
   title: {
-    default: siteConfig.name + " | HAVELSAN Açıklab",
-    template: `%s - ${siteConfig.name}`,
+    default: "Liman Merkezi Yönetim Sistemi | HAVELSAN Açıklab",
+    template: `%s - Liman Merkezi Yönetim Sistemi`,
   },
-  description: siteConfig.description,
+  description:
+    "Liman Merkezi Yönetim Sistemi, organizasyonunuz Bilgi Teknolojileri Hizmetlerini etkili bir şekilde yönetmenize yardımcı olur. Bilgi Teknolojileri (BT) süreçlerinizde bulunan bütün bileşenlerinizi uzaktan, kararlı, güvenli ve genişletilebilir yöntemler ile merkezi olarak yönetebilirsiniz.",
   icons: {
     icon: "/favicon.png",
     shortcut: "/favicon.png",
@@ -38,7 +38,7 @@ interface RootLayoutProps {
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <>
-      <html lang="en" suppressHydrationWarning>
+      <html lang="tr" suppressHydrationWarning>
         <head />
         <body
           className={cn(
