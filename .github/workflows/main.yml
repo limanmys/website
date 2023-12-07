@@ -32,7 +32,8 @@ jobs:
       - name: Build Next application
         run: |
           npm ci --ignore-build
-          npm rebuild --arch=x64 --platform=linux --libc=musl sharp
+          npm install --cpu=x64 --os=linux --libc=musl sharp
+          npm rebuild --cpu=x64 --os=linux --libc=musl sharp
           npm run build
 
           [ "$GITHUB_REF" == "refs/heads/master" ] && PRERELEASE=false || PRERELEASE=true
@@ -41,6 +42,7 @@ jobs:
 
       - name: Move Next standalone files and build package
         run: |
+          cp -r node_modules/\@img .next/standalone/node_modules
           cp -r public/ .next/standalone/
           cp -r .next/static .next/standalone/.next/
           TMP_DIR=/tmp/liman-website
