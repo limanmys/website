@@ -2,11 +2,21 @@ import { Metadata } from "next"
 import Image from "next/image"
 import DevMgrDark from "@/public/images/DevMgrDark.jpg"
 import DevMgrWhite from "@/public/images/DevMgrWhite.jpg"
+import {
+  CloudCog,
+  Component,
+  Eye,
+  Gauge,
+  LandPlot,
+  MonitorCheck,
+  MonitorUp,
+  ShieldCheck,
+} from "lucide-react"
 
 import { fontHeading } from "@/lib/fonts"
 import { cn } from "@/lib/utils"
-import { Card } from "@/components/ui/card"
 import AppWindow from "@/components/ui/window"
+import SpotlightStack from "@/components/spotlight-stack"
 
 export const metadata: Metadata = {
   title: "Cihaz Yöneticisi",
@@ -14,178 +24,107 @@ export const metadata: Metadata = {
     "Windows ve Linux cihazlarınıza görevler gönderin, yazılım ve donanım envanter bilgilerinizi görüntüleyin, paket ve yama yönetiminizi yapın, dinamik koleksiyonlarla hızlıca yönetin.",
 }
 
+const FeatureList = [
+  {
+    icon: MonitorCheck,
+    title: "Donanım Envanter Yönetimi",
+    description:
+      "Organizasyonun sahip olduğu tüm BT cihazlarını izleyerek bir envanterinizi oluşturun. Donanım bilgilerini toplayarak, cihazların özelliklerini ve durumlarını takip edin.",
+  },
+
+  {
+    icon: Component,
+    title: "Yazılım Envanter Yönetimi",
+    description:
+      "Yazılım bilgilerini toplayarak, cihazların özelliklerini ve durumlarını takip edin. Lisans yönetimi için kullanılabilir ve organizasyonun lisans uygumluluğunu takip edin.",
+  },
+
+  {
+    icon: MonitorUp,
+    title: "Uzaktan Yönetim ve Kontrol",
+    description:
+      "Uzaktan cihazları kontrol etme, güncelleme, anlık müdahele ile sorun giderme ve yapılandırma gibi işlemleri uzaktan gerçekleştirmeye olanak tanır.",
+  },
+
+  {
+    icon: LandPlot,
+    title: "Yazılım Dağıtımı ve Takibi",
+    description:
+      "Yazılım dağıtımını ve güncelleme süreçlerini otomatikleştirin. Güvenlik yamaları, yeni sürümler veya uygulama güncellemeleri gibi yazılım değişikliklerini cihazlara güvenli bir şekilde dağıtın.",
+  },
+
+  {
+    icon: Gauge,
+    title: "İzleme ve Performans Analizi",
+    description:
+      "Sağlık, kullanılabilirlik, CPU, bellek ve disk kullanımı dahil olmak üzere kritik sunucu ve uç noktalarınızın performansı izleyin ve analiz edin. Donanım kaynaklarının kullanımını, ağ trafiğini ve diğer metrikleri değerlendirerek sorunları önceden tespit edin.",
+  },
+
+  {
+    icon: CloudCog,
+    title: "Güncelleme Takibi",
+    description:
+      "Belirli bir yazılıma ait güvenlik yamalarını ve güncellemeleri otomatik olarak dağıtarak sistemlerin güncel kalmasını sağlayın. Kritik güvenlik güncellemelerini ve düzeltmelerini zamanında ve hatasız bir şekilde uygulayın.",
+  },
+
+  {
+    icon: ShieldCheck,
+    title: "Güvenlik Yönetimi",
+    description:
+      "Ağ güvenliğini sıkılaştırmak ve ağ saldırılarını önlemek için güvenlik duvarı kurallarını, günlüklerini, ilkelerini ve yapılandırmalarını yönetin. Kulandığınız ürünlerde güvenlik açıkları tespit edildiğinde, bu",
+  },
+
+  {
+    icon: Eye,
+    title: "Uyum İzleme ve Raporlama",
+    description:
+      "Belirli bir zaman dilimi içinde hangi sistemlerin güncel olduğunu ve hangilerinin güncellenmeye ihtiyaç duyduğunu izleyin. Uyumluluk izleme ve raporlama özellikleri ile regülasyonlara uyum sağlayın. Kurum içi izlenebilirliğinin ve süreç takibinizi arttırın.",
+  },
+]
+
 export default function DeviceManagerPage() {
   return (
-    <section id="extension-landing" className="container mt-[15vh]">
-      <h1
-        className={cn(
-          "bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-center font-heading text-2xl text-transparent sm:text-3xl md:text-4xl lg:text-5xl",
-          fontHeading.variable
-        )}
-      >
-        Cihaz Yöneticisi
-      </h1>
-
-      <p className="mt-5 text-center">
-        Organizasyonunuzda bulunan cihazlarınızı etkili bir şekilde yönetin.
-      </p>
-
-      <AppWindow className="mt-10">
-        <Image
-          src={DevMgrWhite}
-          className="block dark:hidden"
-          alt="Cihaz Yöneticisi"
-          quality={80}
-          placeholder="blur"
-          width={1920}
-          height={1080}
-        />
-        <Image
-          src={DevMgrDark}
-          className="hidden dark:block"
-          alt="Cihaz Yöneticisi"
-          quality={80}
-          placeholder="blur"
-          width={1920}
-          height={1080}
-        />
-      </AppWindow>
-
-      <Card className="my-10 p-5">
-        <article
-          className="prose dark:prose-invert sm:prose lg:prose-lg xl:prose-xl"
-          style={{
-            maxWidth: "100%",
-          }}
+    <>
+      <section className="container mt-[15vh] flex flex-col items-center">
+        <h1
+          className={cn(
+            "bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-center font-heading text-2xl text-transparent sm:text-3xl md:text-4xl lg:text-5xl",
+            fontHeading.variable
+          )}
         >
-          <ol>
-            <li>
-              Donanım Envanter Yönetimi
-              <ul>
-                <li>
-                  Organizasyonun sahip olduğu tüm BT cihazlarını izleyerek bir
-                  envanterinizi oluşturun.
-                </li>
-                <li>
-                  Donanım bilgilerini toplayarak, cihazların özelliklerini ve
-                  durumlarını takip edin.
-                </li>
-              </ul>
-            </li>
-            <li>
-              Yazılım Envanter Yönetimi
-              <ul>
-                <li>
-                  Yazılım bilgilerini toplayarak, cihazların özelliklerini ve
-                  durumlarını takip edin.
-                </li>
-                <li>
-                  Lisans yönetimi için kullanılabilir ve organizasyonun lisans
-                  uygumluluğunu takip edin.
-                </li>
-              </ul>
-            </li>
-            <li>
-              Uzaktan Yönetim ve Kontrol
-              <ul>
-                <li>
-                  Uzaktan cihazları kontrol etme, güncelleme, anlık müdahele ile
-                  sorun giderme ve yapılandırma gibi işlemleri uzaktan
-                  gerçekleştirmeye olanak tanır.
-                </li>
-              </ul>
-            </li>
+          Cihaz Yöneticisi
+        </h1>
 
-            <li>
-              Yazılım Dağıtımı ve Takibi
-              <ul>
-                <li>
-                  Yazılım dağıtımını ve güncelleme süreçlerini otomatikleştirin.
-                </li>
-                <li>
-                  Güvenlik yamaları, yeni sürümler veya uygulama güncellemeleri
-                  gibi yazılım değişikliklerini cihazlara güvenli bir şekilde
-                  dağıtın.
-                </li>
-              </ul>
-            </li>
+        <p className="mt-5 max-w-5xl text-center text-muted-foreground">
+          Windows ve Linux cihazlarınıza görevler gönderin, yazılım ve donanım
+          envanter bilgilerinizi görüntüleyin, paket ve yama yönetiminizi yapın,
+          dinamik koleksiyonlarla hızlıca yönetin.
+        </p>
+      </section>
+      <SpotlightStack items={FeatureList} cols="lg:grid-cols-4" />
 
-            <li>
-              Güncelle Takibi
-              <ul>
-                <li>
-                  Belirli bir yazılıma ait güvenlik yamalarını ve güncellemeleri
-                  otomatik olarak dağıtarak sistemlerin güncel kalmasını
-                  sağlayın.
-                </li>
-                <li>
-                  Kritik güvenlik güncellemelerini ve düzeltmelerini zamanında
-                  ve hatasız bir şekilde uygulayın.
-                </li>
-              </ul>
-            </li>
-
-            <li>
-              Güvenlik Yönetimi
-              <ul>
-                <li>
-                  Ağ güvenliğini sıkılaştırmak ve ağ saldırılarını önlemek için
-                  güvenlik duvarı kurallarını, günlüklerini, ilkelerini ve
-                  yapılandırmalarını yönetin.
-                </li>
-                <li>
-                  Kulandığınız ürünlerde güvenlik açıkları tespit edildiğinde,
-                  bunların hızlı bir şekilde kapatılmasını sağlayın.
-                </li>
-                <li>
-                  Sistemlerde ve uygulamalarda potansiyel güvenlik açıklarını
-                  tespit edin.
-                </li>
-                <li>
-                  Bilgisayar korsanlarının kötü amaçlı yazılımları ve siber
-                  saldırıları için kullanabilecekleri zayıf noktaları
-                  belirleyin.
-                </li>
-              </ul>
-            </li>
-
-            <li>
-              İzleme ve Performans Analizi
-              <ul>
-                <li>
-                  Sağlık, kullanılabilirlik, CPU, bellek ve disk kullanımı dahil
-                  olmak üzere kritik fiziksel ve sanal sunucu, uç noktalarınızın
-                  performansı izleyin ve analiz edin.
-                </li>
-                <li>
-                  Donanım kaynaklarının kullanımını, ağ trafiğini ve diğer
-                  performans metriklerini değerlendirerek sorunları önceden
-                  tespit edin.
-                </li>
-              </ul>
-            </li>
-
-            <li>
-              Uyum İzleme ve Raporlama
-              <ul>
-                <li>
-                  Organizasyonun belirli bir zaman dilimi içinde hangi
-                  sistemlerin güncel olduğunu ve hangilerinin güncellenmeye
-                  ihtiyaç duyduğunu izleyin.
-                </li>
-                <li>
-                  Uyumluluk izleme ve raporlama özellikleri ile regülasyonlara
-                  uyum sağlayın ve organizasyonun güvenlik durumunu
-                  değerlendirin.
-                </li>
-                <li>
-                  Kurum içi izlenebilirliğinin ve süreç takibinizi arttırın.
-                </li>
-              </ul>
-            </li>
-          </ol>
-        </article>
-      </Card>
-    </section>
+      <section className="container">
+        <AppWindow className="mb-10">
+          <Image
+            src={DevMgrWhite}
+            className="block dark:hidden"
+            alt="Cihaz Yöneticisi"
+            quality={80}
+            placeholder="blur"
+            width={1920}
+            height={1080}
+          />
+          <Image
+            src={DevMgrDark}
+            className="hidden dark:block"
+            alt="Cihaz Yöneticisi"
+            quality={80}
+            placeholder="blur"
+            width={1920}
+            height={1080}
+          />
+        </AppWindow>
+      </section>
+    </>
   )
 }
