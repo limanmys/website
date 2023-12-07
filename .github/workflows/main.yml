@@ -32,6 +32,7 @@ jobs:
       - name: Build Next application
         run: |
           npm ci --ignore-build
+          npm rebuild --arch=x64 --platform=linux --libc=musl sharp
           npm run build
 
           [ "$GITHUB_REF" == "refs/heads/master" ] && PRERELEASE=false || PRERELEASE=true

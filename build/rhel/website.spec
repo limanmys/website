@@ -40,7 +40,7 @@ StartLimitIntervalSec=0
 Type=simple
 Restart=always
 RestartSec=1
-User=liman
+Environment=NEXT_SHARP_PATH=/liman/website/node_modules/sharp
 WorkingDirectory=/liman/website
 ExecStart=/usr/bin/node server.js
 
