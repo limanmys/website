@@ -149,7 +149,7 @@ export default function Showcase() {
         <div className="flex max-w-2xl flex-col items-center justify-center text-center md:mx-auto xl:max-w-none">
           <h2
             className={cn(
-              "bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text font-heading text-3xl text-transparent sm:text-4xl md:text-5xl",
+              "bg-gradient-to-r from-primary-light to-primary bg-clip-text font-heading text-3xl text-transparent sm:text-4xl md:text-5xl",
               fontHeading.variable
             )}
           >

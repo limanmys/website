@@ -18,26 +18,25 @@ export default function LogoCarousel() {
       src: YSK,
       alt: "Yüksek Seçim Kurulu",
       noFilter: true,
-      className: "w-auto h-[72px]",
+      className: "w-auto h-[64px]",
     },
     {
       src: KiyiEmniyeti,
       alt: "Kıyı Emniyeti Genel Müdürlüğü",
       noFilter: true,
-      className: "w-auto h-[72px]",
+      className: "w-auto h-[64px]",
     },
     { src: GAMER, alt: "GAMER, İçişleri Bakanlığı" },
     { src: HAVELSAN, alt: "HAVELSAN" },
-    { src: Icisleri, alt: "T.C. İçişleri Bakanlığı", className: "h-[48px]" },
-    { src: Kizilay, alt: "Kızılay", className: "h-[48px]" },
-    { src: MSB, alt: "Milli Savunma Bakanlığı", className: "h-[55px]" },
+    { src: Icisleri, alt: "T.C. İçişleri Bakanlığı", className: "h-[42px]" },
+    { src: Kizilay, alt: "Kızılay", className: "h-[42px]" },
+    { src: MSB, alt: "Milli Savunma Bakanlığı", className: "h-[50px]" },
     {
       src: TarimOrmanBakanligi,
       alt: "Tarım ve Orman Bakanlığı",
-      className: "h-[48px]",
+      className: "h-[42px]",
     },
     { src: TCMB, alt: "Türkiye Cumhuriyet Merkez Bankası" },
-
     { src: ZiraatKatilim, alt: "Ziraat Katılım" },
   ]
 

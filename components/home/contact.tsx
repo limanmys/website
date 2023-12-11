@@ -1,20 +1,23 @@
 "use client"
 
+import Image from "next/image"
+
 import { fontHeading } from "@/lib/fonts"
 import { cn } from "@/lib/utils"
 
+import Wheel from "../../public/images/wheel.png"
 import { ContactForm } from "../contact-form"
 import { Card, CardContent } from "../ui/card"
 
 export default function ContactSection({ className }: { className?: string }) {
   return (
     <section id="contact" className={cn("border-t", className)}>
-      <div className="container py-12">
+      <div className="container relative py-12">
         <div className="grid-cols-5 gap-8 md:grid">
           <div className="col-span-2 flex flex-col justify-center">
             <h5
               className={cn(
-                "bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text font-heading text-4xl leading-[3rem] text-transparent",
+                "bg-gradient-to-r from-primary-light to-primary bg-clip-text font-heading text-4xl leading-[3rem] text-transparent",
                 fontHeading.variable
               )}
             >
@@ -36,6 +39,16 @@ export default function ContactSection({ className }: { className?: string }) {
               avantajı elde edebilirsiniz.
             </p>
           </div>
+          <Image
+            src={Wheel}
+            alt="Liman Merkezi Yönetim Sistemi"
+            quality={80}
+            width={250}
+            height={100}
+            priority={true}
+            loading="eager"
+            className="pointer-events-none absolute bottom-[-3vh] right-[-3vw] z-10 hidden rotate-45 md:block"
+          />
           <div className="col-span-3">
             <Card className="shadow shadow-accent">
               <CardContent className="p-4 md:p-6 lg:p-8">

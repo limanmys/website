@@ -1,7 +1,12 @@
-import { MonitorCheck } from "lucide-react"
-import Link from "next/link"
-import React from "react"
+"use client"
 
+import React from "react"
+import Link from "next/link"
+import { MonitorCheck } from "lucide-react"
+import { useTheme } from "next-themes"
+
+import { NavItem } from "@/types/nav"
+import { cn } from "@/lib/utils"
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -11,10 +16,11 @@ import {
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu"
-import { cn } from "@/lib/utils"
-import { NavItem } from "@/types/nav"
 
+import { Icons } from "./icons"
 import { Logo } from "./logos/logo"
+import { ModeToggle } from "./mode-toggle"
+import { buttonVariants } from "./ui/button"
 
 interface MainNavProps {
   items?: NavItem[]
@@ -59,13 +65,19 @@ const components: { title: string; href: string; description: string }[] = [
 ]
 
 export function MainNav() {
+  const { theme } = useTheme()
+
   return (
-    <div className="flex gap-6 md:gap-10">
+    <div className="flex w-full justify-between gap-6 md:gap-10">
       <Link
         href="/"
         className="flex items-center space-x-2 transition-opacity hover:opacity-80"
       >
-        <Logo className="h-7 w-auto" />
+        {theme === "dark" ? (
+          <Logo className="h-7 w-auto" />
+        ) : (
+          <Icons.logoLight className="h-7 w-auto" />
+        )}
       </Link>
       <NavigationMenu>
         <NavigationMenuList>
@@ -176,16 +188,6 @@ export function MainNav() {
             </Link>
           </NavigationMenuItem>
           <NavigationMenuItem>
-            <Link href="https://aciklab.org" legacyBehavior passHref>
-              <NavigationMenuLink
-                target="_blank"
-                className={navigationMenuTriggerStyle()}
-              >
-                Açıklab
-              </NavigationMenuLink>
-            </Link>
-          </NavigationMenuItem>
-          <NavigationMenuItem>
             <Link href="/contact" legacyBehavior passHref>
               <NavigationMenuLink className={navigationMenuTriggerStyle()}>
                 İletişim
@@ -194,6 +196,26 @@ export function MainNav() {
           </NavigationMenuItem>
         </NavigationMenuList>
       </NavigationMenu>
+      <div className="flex items-center space-x-4">
+        <nav className="flex items-center space-x-1">
+          <Link
+            href="https://github.com/limanmys"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <div
+              className={buttonVariants({
+                size: "icon",
+                variant: "ghost",
+              })}
+            >
+              <Icons.gitHub className="h-5 w-5" />
+              <span className="sr-only">GitHub</span>
+            </div>
+          </Link>
+          <ModeToggle />
+        </nav>
+      </div>
     </div>
   )
 }

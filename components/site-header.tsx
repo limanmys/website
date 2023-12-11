@@ -1,14 +1,9 @@
 "use client"
 
 import { useEffect, useState } from "react"
-import Link from "next/link"
 
 import { cn } from "@/lib/utils"
-import { buttonVariants } from "@/components/ui/button"
-import { Icons } from "@/components/icons"
 import { MainNav } from "@/components/main-nav"
-
-import { ModeToggle } from "./mode-toggle"
 
 export function SiteHeader() {
   const [top, setTop] = useState(true)
@@ -45,26 +40,6 @@ export function SiteHeader() {
         )}
       >
         <MainNav />
-        <div className="flex flex-1 items-center justify-end space-x-4">
-          <nav className="flex items-center space-x-1">
-            <Link
-              href="https://github.com/limanmys"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <div
-                className={buttonVariants({
-                  size: "icon",
-                  variant: "ghost",
-                })}
-              >
-                <Icons.gitHub className="h-5 w-5" />
-                <span className="sr-only">GitHub</span>
-              </div>
-            </Link>
-            <ModeToggle />
-          </nav>
-        </div>
       </div>
     </header>
   )

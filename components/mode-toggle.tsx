@@ -1,6 +1,5 @@
 "use client"
 
-import { Laptop } from "lucide-react"
 import { useTheme } from "next-themes"
 
 import { Button } from "@/components/ui/button"
@@ -32,10 +31,6 @@ export function ModeToggle() {
         <DropdownMenuItem onClick={() => setTheme("dark")}>
           <Icons.moon className="mr-2 h-4 w-4" />
           <span>Karanlık</span>
-        </DropdownMenuItem>
-        <DropdownMenuItem onClick={() => setTheme("system")}>
-          <Laptop className="mr-2 h-4 w-4" />
-          <span>Sistem</span>
         </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>

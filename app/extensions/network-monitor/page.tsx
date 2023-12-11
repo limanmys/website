@@ -67,7 +67,7 @@ export default function NetworkMonitorPage() {
       <section className="container mt-[15vh] flex flex-col items-center">
         <h1
           className={cn(
-            "bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-center font-heading text-2xl text-transparent sm:text-3xl md:text-4xl lg:text-5xl",
+            "bg-gradient-to-r from-primary-light to-primary bg-clip-text text-center font-heading text-2xl text-transparent sm:text-3xl md:text-4xl lg:text-5xl",
             fontHeading.variable
           )}
         >
