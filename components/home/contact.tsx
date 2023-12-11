@@ -14,41 +14,42 @@ export default function ContactSection({ className }: { className?: string }) {
     <section id="contact" className={cn("border-t", className)}>
       <div className="container relative py-12">
         <div className="grid-cols-5 gap-8 md:grid">
-          <div className="relative col-span-2 flex flex-col justify-center">
+          <div className="relative col-span-2 flex flex-col justify-between">
             <Image
               src={Wheel}
               alt="Liman Merkezi Yönetim Sistemi"
               quality={80}
-              width={225}
+              width={140}
               height={80}
               priority={true}
               loading="eager"
-              className="pointer-events-none absolute right-[-3vw] top-[-2.5vh] z-10 hidden md:block"
+              className="pointer-events-none"
             />
+            <div>
+              <h5
+                className={cn(
+                  "bg-gradient-to-r from-primary-light to-primary bg-clip-text font-heading text-4xl leading-[3rem] text-transparent",
+                  fontHeading.variable
+                )}
+              >
+                Bizimle <br />
+                iletişime geçin
+              </h5>
 
-            <h5
-              className={cn(
-                "bg-gradient-to-r from-primary-light to-primary bg-clip-text font-heading text-4xl leading-[3rem] text-transparent",
-                fontHeading.variable
-              )}
-            >
-              Bizimle <br />
-              iletişime geçin
-            </h5>
+              <p className="mb-5 mt-6 leading-relaxed text-muted-foreground md:mb-0">
+                Sorunsuz bir BT süreci için kavram ispat çalışmamızla ücretsiz
+                demoyu sizlere sunuyoruz! İhtiyacınıza uygun eklentilerimizi 30
+                gün boyunca ücretsiz deneme sürecine hemen başlayabilirsiniz.
+              </p>
 
-            <p className="mb-5 mt-6 leading-relaxed text-muted-foreground md:mb-0">
-              Sorunsuz bir BT süreci için kavram ispat çalışmamızla ücretsiz
-              demoyu sizlere sunuyoruz! İhtiyacınıza uygun eklentilerimizi 30
-              gün boyunca ücretsiz deneme sürecine hemen başlayabilirsiniz.
-            </p>
-
-            <p className="mt-6 hidden leading-relaxed text-muted-foreground lg:block">
-              Liman Merkezi Yönetim Sistemi, modern iş dünyasında bilgi
-              teknolojileri hizmetlerini etkili bir şekilde yönetmeye yönelik
-              kapsamlı bir yaklaşım sunmaktadır. BT hizmetlerinizin kontrolünü
-              elinizde tutabilir ve sürekli gelişen iş ortamında rekabet
-              avantajı elde edebilirsiniz.
-            </p>
+              <p className="mt-6 hidden leading-relaxed text-muted-foreground lg:block">
+                Liman Merkezi Yönetim Sistemi, modern iş dünyasında bilgi
+                teknolojileri hizmetlerini etkili bir şekilde yönetmeye yönelik
+                kapsamlı bir yaklaşım sunmaktadır. BT hizmetlerinizin kontrolünü
+                elinizde tutabilir ve sürekli gelişen iş ortamında rekabet
+                avantajı elde edebilirsiniz.
+              </p>
+            </div>
           </div>
 
           <div className="col-span-3">

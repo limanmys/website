@@ -121,7 +121,7 @@ export default function Navigation() {
               target="_blank"
               className={navigationMenuTriggerStyle()}
             >
-              Teknik Doküman
+              Teknik Özellikler
             </NavigationMenuLink>
           </Link>
         </NavigationMenuItem>

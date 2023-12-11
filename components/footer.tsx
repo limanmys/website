@@ -54,7 +54,7 @@ export function SiteFooter({ className }: React.HTMLAttributes<HTMLElement>) {
                     target="_blank"
                     className={navigationMenuTriggerStyle()}
                   >
-                    Teknik Doküman
+                    Teknik Özellikler
                   </NavigationMenuLink>
                 </Link>
               </NavigationMenuItem>
