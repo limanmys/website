@@ -1,6 +1,6 @@
 import { Metadata } from "next"
 
-import ContactSection from "@/components/home/contact"
+import Contact from "@/components/contact"
 
 export const metadata: Metadata = {
   title: "İletişim",
@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 export default function ContactPage() {
   return (
     <section className="flex min-h-screen items-center justify-center">
-      <ContactSection className="border-t-0" />
+      <Contact />
     </section>
   )
 }

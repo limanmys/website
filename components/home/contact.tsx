@@ -14,7 +14,18 @@ export default function ContactSection({ className }: { className?: string }) {
     <section id="contact" className={cn("border-t", className)}>
       <div className="container relative py-12">
         <div className="grid-cols-5 gap-8 md:grid">
-          <div className="col-span-2 flex flex-col justify-center">
+          <div className="relative col-span-2 flex flex-col justify-center">
+            <Image
+              src={Wheel}
+              alt="Liman Merkezi Yönetim Sistemi"
+              quality={80}
+              width={225}
+              height={80}
+              priority={true}
+              loading="eager"
+              className="pointer-events-none absolute right-[-3vw] top-[-2.5vh] z-10 hidden md:block"
+            />
+
             <h5
               className={cn(
                 "bg-gradient-to-r from-primary-light to-primary bg-clip-text font-heading text-4xl leading-[3rem] text-transparent",
@@ -39,16 +50,7 @@ export default function ContactSection({ className }: { className?: string }) {
               avantajı elde edebilirsiniz.
             </p>
           </div>
-          <Image
-            src={Wheel}
-            alt="Liman Merkezi Yönetim Sistemi"
-            quality={80}
-            width={250}
-            height={100}
-            priority={true}
-            loading="eager"
-            className="pointer-events-none absolute bottom-[-3vh] right-[-3vw] z-10 hidden rotate-45 md:block"
-          />
+
           <div className="col-span-3">
             <Card className="shadow shadow-accent">
               <CardContent className="p-4 md:p-6 lg:p-8">

@@ -14,6 +14,7 @@ import {
 import { fontHeading } from "@/lib/fonts"
 import { cn } from "@/lib/utils"
 import AppWindow from "@/components/ui/window"
+import Contact from "@/components/contact"
 import SpotlightStack from "@/components/spotlight-stack"
 
 export const metadata: Metadata = {
@@ -104,6 +105,7 @@ export default function NetworkMonitorPage() {
           />
         </AppWindow>
       </section>
+      <Contact />
     </>
   )
 }

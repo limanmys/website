@@ -44,7 +44,7 @@ export default function Hero() {
           height={100}
           priority={true}
           loading="eager"
-          className="pointer-events-none absolute bottom-[-6vh] left-[-3vw] z-10 hidden md:block"
+          className="pointer-events-none absolute bottom-[0vh] left-[-3vw] z-10 hidden md:block"
         />
         <AppWindow className="relative -m-5 mt-10">
           <Image

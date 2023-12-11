@@ -7,6 +7,7 @@ import { Bug, Eye, List, MonitorCheck, Scan, ShieldAlert } from "lucide-react"
 import { fontHeading } from "@/lib/fonts"
 import { cn } from "@/lib/utils"
 import AppWindow from "@/components/ui/window"
+import Contact from "@/components/contact"
 import SpotlightStack from "@/components/spotlight-stack"
 
 export const metadata: Metadata = {
@@ -98,6 +99,7 @@ export default function NetworkExplorerPage() {
           />
         </AppWindow>
       </section>
+      <Contact />
     </>
   )
 }
