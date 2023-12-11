@@ -1,9 +1,7 @@
-import React from "react"
-import Link from "next/link"
 import { MonitorCheck } from "lucide-react"
+import Link from "next/link"
+import React from "react"
 
-import { NavItem } from "@/types/nav"
-import { cn } from "@/lib/utils"
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -13,6 +11,8 @@ import {
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu"
+import { cn } from "@/lib/utils"
+import { NavItem } from "@/types/nav"
 
 import { Logo } from "./logos/logo"
 
@@ -164,6 +164,16 @@ export function MainNav() {
                 </ListItem>
               </ul>
             </NavigationMenuContent>
+          </NavigationMenuItem>
+          <NavigationMenuItem>
+            <Link href="/datasheet.pdf" legacyBehavior passHref>
+              <NavigationMenuLink
+                target="_blank"
+                className={navigationMenuTriggerStyle()}
+              >
+                Datasheet
+              </NavigationMenuLink>
+            </Link>
           </NavigationMenuItem>
           <NavigationMenuItem>
             <Link href="https://aciklab.org" legacyBehavior passHref>
