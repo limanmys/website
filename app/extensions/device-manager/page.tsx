@@ -71,8 +71,14 @@ const FeatureList = [
   {
     icon: ShieldCheck,
     title: "Güvenlik Yönetimi",
+    /**
+     *         ◦ Ağ güvenliğini sıkılaştırmak ve ağ saldırılarını önlemek için güvenlik duvarı kurallarını, günlüklerini, ilkelerini ve yapılandırmalarını yönetin.
+        ◦ Kulandığınız ürünlerde güvenlik açıkları tespit edildiğinde, bunların hızlı bir şekilde kapatılmasını sağlayın.
+        ◦ Sistemlerde ve uygulamalarda potansiyel güvenlik açıklarını tespit edin.
+        ◦ Bilgisayar korsanlarının kötü amaçlı yazılımları ve siber saldırıları için kullanabilecekleri zayıf noktaları belirleyin.
+     */
     description:
-      "Ağ güvenliğini sıkılaştırmak ve ağ saldırılarını önlemek için güvenlik duvarı kurallarını, günlüklerini, ilkelerini ve yapılandırmalarını yönetin. Kulandığınız ürünlerde güvenlik açıkları tespit edildiğinde, bu",
+      "Ağ güvenliğini sıkılaştırmak ve ağ saldırılarını önlemek için güvenlik duvarı kurallarını, günlüklerini, ilkelerini ve yapılandırmalarını yönetin. Kulandığınız ürünlerde güvenlik açıkları tespit edildiğinde, hızlı bir şekilde kapatılmasını sağlayın.",
   },
 
   {
