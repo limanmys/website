@@ -4,6 +4,7 @@ import HAVELSAN from "@/public/references/HAVELSAN.webp"
 import Icisleri from "@/public/references/Icisleri.png"
 import KiyiEmniyeti from "@/public/references/KiyiEmniyeti.webp"
 import Kizilay from "@/public/references/Kizilay.png"
+import LogoYazilim from "@/public/references/LogoYazilim.png"
 import MSB from "@/public/references/MilliSavunmaBakanligi.png"
 import TarimOrmanBakanligi from "@/public/references/TarimOrmanBakanligi.png"
 import TCMB from "@/public/references/TCMB.svg"
@@ -30,6 +31,7 @@ export default function LogoCarousel() {
     { src: HAVELSAN, alt: "HAVELSAN" },
     { src: Icisleri, alt: "T.C. İçişleri Bakanlığı", className: "h-[38px]" },
     { src: Kizilay, alt: "Kızılay", className: "h-[38px]" },
+    { src: LogoYazilim, alt: "Logo Yazılım", className: "h-[32px]" },
     { src: MSB, alt: "Milli Savunma Bakanlığı", className: "h-[46px]" },
     {
       src: TarimOrmanBakanligi,
