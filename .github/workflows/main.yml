@@ -63,9 +63,6 @@ jobs:
           mv /tmp/liman-website.deb /tmp/liman-website-${{ github.run_number }}.deb
           rm -rf $DEBIAN_PATH
 
-          sed -i s/%VERSION%/${{ github.run_number }}/g build/rhel/website.spec
-          rpmbuild -ba build/rhel/website.spec --define "_app_dir $TMP_DIR" --define "_rpmdir /tmp" --define "_rpmfilename liman-website-${{ github.run_number }}.rpm"
-
       - name: Release 🚀
         id: create_release
         uses: softprops/action-gh-release@v1
