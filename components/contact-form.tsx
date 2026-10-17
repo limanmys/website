@@ -181,7 +181,7 @@ export function ContactForm() {
                   <span className="ml-1 font-bold text-red-500">*</span>
                 </FormLabel>
                 <FormControl>
-                  <Input placeholder="liman@aciklab.org" {...field} />
+                  <Input placeholder="ornek@kurum.com" {...field} />
                 </FormControl>
                 <FormMessage />
               </FormItem>
