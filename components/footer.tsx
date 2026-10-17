@@ -21,7 +21,7 @@ export function SiteFooter({ className }: React.HTMLAttributes<HTMLElement>) {
         <div className="md:h-18 container flex flex-col items-center justify-between gap-8 md:flex-row md:py-0">
           <Link
             className="flex flex-col md:gap-2 md:px-0"
-            href="https://aciklab.org"
+            href="https://liman.havelsan.com.tr"
             target="_blank"
           >
             <Aciklab className="h-7 w-auto" />
