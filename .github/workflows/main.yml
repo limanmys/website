@@ -5,22 +5,15 @@ jobs:
     runs-on: ubuntu-26.04
     steps:
       - name: Install checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
 
       - name: Install node
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v4
         with:
           node-version: 24
 
-      - name: Cache dependencies
-        uses: actions/cache@v3
-        with:
-          path: ~/.npm
-          key: npm-${{ hashFiles('package-lock.json') }}
-          restore-keys: npm-
-
       - name: Cache next build
-        uses: actions/cache@v3
+        uses: actions/cache@v4
         with:
           path: |
             ~/.npm
@@ -31,9 +24,7 @@ jobs:
 
       - name: Build Next application
         run: |
-          npm ci --ignore-build
-          npm install --cpu=x64 --os=linux --libc=musl sharp
-          npm rebuild --cpu=x64 --os=linux --libc=musl sharp
+          npm ci
           npm run build
 
           [ "$GITHUB_REF" == "refs/heads/master" ] && PRERELEASE=false || PRERELEASE=true
@@ -71,7 +62,6 @@ jobs:
         with:
           files: |
             /tmp/liman-website-${{ github.run_number }}.deb
-            /tmp/liman-website-${{ github.run_number }}.rpm
           name: "Release ${{ env.UI_BRANCH }} ${{ github.run_number }}"
           tag_name: "release.${{ env.UI_BRANCH }}.${{ github.run_number }}"
           prerelease: ${{ env.PRERELEASE }}
